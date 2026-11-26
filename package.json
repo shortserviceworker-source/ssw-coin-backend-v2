@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
-    "check": "node --check src/server.js && node --check src/app.js && node --check src/middleware/auth.js && node --check src/services/totp.js && node --check src/services/mailer.js && node --check src/routes/auth.js && node --check src/routes/admin.js && node --check src/routes/admin_extra.js && node --check src/routes/admin_security.js && node --check src/routes/public.js && node --check src/routes/user.js && node --check src/routes/user_extra.js"
+    "check": "node --check src/server.js && node --check src/app.js && node --check src/middleware/auth.js && node --check src/services/audit.js && node --check src/services/db.js && node --check src/services/totp.js && node --check src/services/mailer.js && node --check src/routes/auth.js && node --check src/routes/admin.js && node --check src/routes/admin_extra.js && node --check src/routes/admin_security.js && node --check src/routes/public.js && node --check src/routes/user.js && node --check src/routes/user_extra.js"
   },
   "engines": {
     "node": ">=20"
