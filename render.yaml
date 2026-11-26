@@ -2,7 +2,7 @@ services:
   - type: web
     name: ssw-coin-api-staging
     runtime: node
-    rootDir: Backend_API_v1_2
+   
     plan: free
     buildCommand: npm install
     startCommand: npm start
