@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: ssw-coin-api-staging
+    runtime: node
+    rootDir: Backend_API_v1_2
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: false
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: ADMIN_2FA_ENCRYPTION_KEY
+        sync: false
+      - key: CORS_ORIGIN
+        value: https://sswcoin.blogspot.com
+      - key: PUBLIC_APP_URL
+        value: https://sswcoin.blogspot.com
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_SECURE
+        value: "false"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: MAIL_FROM
+        sync: false
